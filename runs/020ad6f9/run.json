@@ -1,0 +1,257 @@
+{
+  "run_id": "020ad6f9",
+  "goal": "Find blue running shoes under $100 and complete guest checkout.",
+  "version": 2,
+  "site": "shopeasy",
+  "website": "ShopEasy",
+  "status": "SUCCESS",
+  "outcome": "SUCCESS",
+  "message": "Exact requested product verified and checkout confirmation reached.",
+  "steps": [
+    {
+      "step": 1,
+      "action": "click",
+      "target": "href:/target/v2/product/blue-sprint",
+      "reason": "The exact requested product is already visible; no search is needed: Blue Sprint Running Shoes.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2",
+      "url_after": "http://127.0.0.1:8000/target/v2/product/blue-sprint",
+      "duration_sec": 0.36
+    },
+    {
+      "step": 2,
+      "action": "click",
+      "target": "Add to Cart",
+      "reason": "Add exact goal-matching product: Blue Sprint Running Shoes.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/product/blue-sprint",
+      "url_after": "http://127.0.0.1:8000/target/v2/product/blue-sprint",
+      "duration_sec": 0.09
+    },
+    {
+      "step": 3,
+      "action": "click",
+      "target": "Cart",
+      "reason": "Product already added; open cart for checkout.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/product/blue-sprint",
+      "url_after": "http://127.0.0.1:8000/target/v2/cart",
+      "duration_sec": 0.37
+    },
+    {
+      "step": 4,
+      "action": "click",
+      "target": "Guest Checkout",
+      "reason": "Continue from cart to guest checkout.",
+      "ok": true,
+      "error": "Locator.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"a[href*=\\\"/checkout\\\"]\").first\n    - locator resolved to <a class=\"btn\" id=\"guest-checkout\" href=\"/target/v2/checkout\">Guest Checkout</a>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"occluder\" aria-hidden=\"true\"></div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"occluder\" aria-hidden=\"true\"></div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    6 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"occluder\" aria-hidden=\"true\"></div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n",
+      "url_before": "http://127.0.0.1:8000/target/v2/cart",
+      "url_after": "http://127.0.0.1:8000/target/v2/checkout",
+      "duration_sec": 3.12
+    },
+    {
+      "step": 5,
+      "action": "fill",
+      "target": "Full name",
+      "reason": "Fill guest name.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/checkout",
+      "url_after": "http://127.0.0.1:8000/target/v2/checkout",
+      "duration_sec": 0.03
+    },
+    {
+      "step": 6,
+      "action": "fill",
+      "target": "Email",
+      "reason": "Fill guest email.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/checkout",
+      "url_after": "http://127.0.0.1:8000/target/v2/checkout",
+      "duration_sec": 0.03
+    },
+    {
+      "step": 7,
+      "action": "fill",
+      "target": "Delivery address",
+      "reason": "Fill delivery address.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/checkout",
+      "url_after": "http://127.0.0.1:8000/target/v2/checkout",
+      "duration_sec": 0.04
+    },
+    {
+      "step": 8,
+      "action": "click",
+      "target": "Continue to payment",
+      "reason": "Continue after completing checkout fields.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/checkout",
+      "url_after": "http://127.0.0.1:8000/target/v2/checkout/payment",
+      "duration_sec": 0.36
+    },
+    {
+      "step": 9,
+      "action": "fill",
+      "target": "Card number",
+      "reason": "Fill mock payment details.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/checkout/payment",
+      "url_after": "http://127.0.0.1:8000/target/v2/checkout/payment",
+      "duration_sec": 0.03
+    },
+    {
+      "step": 10,
+      "action": "fill",
+      "target": "CVV",
+      "reason": "Fill mock payment details.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/checkout/payment",
+      "url_after": "http://127.0.0.1:8000/target/v2/checkout/payment",
+      "duration_sec": 0.03
+    },
+    {
+      "step": 11,
+      "action": "click",
+      "target": "Place order",
+      "reason": "Submit mock payment.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2/checkout/payment",
+      "url_after": "http://127.0.0.1:8000/target/v2/checkout/success",
+      "duration_sec": 0.35
+    }
+  ],
+  "findings": [
+    {
+      "kind": "accessibility",
+      "severity": "LOW",
+      "title": "Small interactive target",
+      "evidence": "Visible A target is 47x19 pixels."
+    },
+    {
+      "kind": "ux",
+      "severity": "HIGH",
+      "title": "Occluded checkout control",
+      "evidence": "Normal pointer interaction was intercepted by the V2 overlay (confirmed via bounding-box/hit-test evidence); the agent recovered via direct control activation rather than a real user-reachable click."
+    }
+  ],
+  "paths": [
+    {
+      "nodes": [
+        "/product/blue-sprint",
+        "/cart",
+        "/checkout",
+        "/checkout/payment",
+        "/checkout/success"
+      ],
+      "status": "success"
+    }
+  ],
+  "remediations": [
+    {
+      "finding": "Occluded checkout control",
+      "priority": "HIGH",
+      "recommendation": "Remove or reposition the overlapping layer so the intended control remains visible, reachable and clickable at the tested viewport.",
+      "validation": "Verify normal pointer interaction without force-click recovery."
+    },
+    {
+      "finding": "Small interactive target",
+      "priority": "LOW",
+      "recommendation": "Review the cited UI state and remove the interaction, accessibility, or workflow barrier identified by the auditor.",
+      "validation": "Re-run the affected workflow and verify the evidence is no longer present."
+    }
+  ],
+  "metrics": {
+    "steps": 11,
+    "verified_actions": 11,
+    "friction_score": 0,
+    "repeated_actions": 0,
+    "backtracks": 0,
+    "dead_ends": 0,
+    "errors": 0,
+    "accessibility": 1,
+    "critical_high": 1,
+    "pages_visited": 5,
+    "avg_step_sec": 0.44,
+    "verification_rate": 100.0,
+    "recovery_actions": 1,
+    "goal_checks": 1,
+    "goal_match_evidence": 1,
+    "outcome_confidence": 100
+  },
+  "current_url": "http://127.0.0.1:8000/target/v2/checkout/payment",
+  "current_action": "click Place order",
+  "current_reason": "Submit mock payment.",
+  "current_action_type": "click",
+  "latest_screenshot": "/api/runs/020ad6f9/step_11.png?v=11",
+  "report_url": "/api/runs/020ad6f9/report.html",
+  "evidence": [
+    {
+      "step": 1,
+      "url": "/api/runs/020ad6f9/step_01.png?v=1",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2"
+    },
+    {
+      "step": 2,
+      "url": "/api/runs/020ad6f9/step_02.png?v=2",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/product/blue-sprint"
+    },
+    {
+      "step": 3,
+      "url": "/api/runs/020ad6f9/step_03.png?v=3",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/product/blue-sprint"
+    },
+    {
+      "step": 4,
+      "url": "/api/runs/020ad6f9/step_04.png?v=4",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/cart"
+    },
+    {
+      "step": 5,
+      "url": "/api/runs/020ad6f9/step_05.png?v=5",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/checkout"
+    },
+    {
+      "step": 6,
+      "url": "/api/runs/020ad6f9/step_06.png?v=6",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/checkout"
+    },
+    {
+      "step": 7,
+      "url": "/api/runs/020ad6f9/step_07.png?v=7",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/checkout"
+    },
+    {
+      "step": 8,
+      "url": "/api/runs/020ad6f9/step_08.png?v=8",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/checkout"
+    },
+    {
+      "step": 9,
+      "url": "/api/runs/020ad6f9/step_09.png?v=9",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/checkout/payment"
+    },
+    {
+      "step": 10,
+      "url": "/api/runs/020ad6f9/step_10.png?v=10",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/checkout/payment"
+    },
+    {
+      "step": 11,
+      "url": "/api/runs/020ad6f9/step_11.png?v=11",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/checkout/payment"
+    }
+  ],
+  "cart_verified_exact": false,
+  "baseline": null,
+  "timestamp": "2026-09-19 15:27:16"
+}

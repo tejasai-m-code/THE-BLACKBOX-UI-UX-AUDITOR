@@ -1,0 +1,63 @@
+{
+  "run_id": "ca8449e2",
+  "goal": "Find blue running shoes under $100 and complete guest checkout.",
+  "version": 1,
+  "site": "shopeasy",
+  "website": "ShopEasy",
+  "status": "FAILED",
+  "outcome": "FAILED",
+  "message": "Agent error: TargetClosedError: Locator.inner_text: Target page, context or browser has been closed",
+  "steps": [],
+  "findings": [
+    {
+      "kind": "accessibility",
+      "severity": "LOW",
+      "title": "Small interactive target",
+      "evidence": "Visible A target is 47x19 pixels."
+    }
+  ],
+  "paths": [],
+  "remediations": [
+    {
+      "finding": "Small interactive target",
+      "priority": "LOW",
+      "recommendation": "Review the cited UI state and remove the interaction, accessibility, or workflow barrier identified by the auditor.",
+      "validation": "Re-run the affected workflow and verify the evidence is no longer present."
+    }
+  ],
+  "metrics": {
+    "steps": 1,
+    "verified_actions": 0,
+    "friction_score": 0,
+    "repeated_actions": 0,
+    "backtracks": 0,
+    "dead_ends": 0,
+    "errors": 0,
+    "accessibility": 0,
+    "critical_high": 0,
+    "pages_visited": 0,
+    "avg_step_sec": 0,
+    "verification_rate": 0,
+    "recovery_actions": 0,
+    "goal_checks": 0,
+    "goal_match_evidence": 1,
+    "outcome_confidence": 0
+  },
+  "current_url": "http://127.0.0.1:8000/target/v1",
+  "current_action": "click href:/target/v1/product/blue-sprint",
+  "current_reason": "The exact requested product is already visible; no search is needed: Blue Sprint Running Shoes.",
+  "current_action_type": "click",
+  "latest_screenshot": "/api/runs/ca8449e2/step_01.png?v=1",
+  "report_url": "/api/runs/ca8449e2/report.html",
+  "evidence": [
+    {
+      "step": 1,
+      "url": "/api/runs/ca8449e2/step_01.png?v=1",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v1"
+    }
+  ],
+  "cart_verified_exact": false,
+  "baseline": null,
+  "error": "Locator.inner_text: Target page, context or browser has been closed",
+  "timestamp": "2026-09-19 15:29:08"
+}

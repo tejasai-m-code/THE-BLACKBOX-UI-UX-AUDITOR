@@ -1,0 +1,255 @@
+{
+  "run_id": "13491dc0",
+  "goal": "Find blue running shoes under $100 and complete guest checkout.",
+  "version": 2,
+  "site": "shopeasy",
+  "website": "ShopEasy",
+  "status": "FAILED",
+  "outcome": "FAILED",
+  "message": "Agent error: TargetClosedError: Locator.inner_text: Target page, context or browser has been closed\nCall log:\n  - waiting for locator(\"body\")\n",
+  "steps": [
+    {
+      "step": 1,
+      "action": "click",
+      "target": "href:/target/v2/product/blue-sprint",
+      "reason": "The exact requested product is already visible; no search is needed: Blue Sprint Running Shoes.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2",
+      "url_after": "http://127.0.0.1:8000/target/v2/product/blue-sprint",
+      "duration_sec": 1.03
+    }
+  ],
+  "findings": [
+    {
+      "kind": "accessibility",
+      "severity": "LOW",
+      "title": "Small interactive target",
+      "evidence": "Visible A target is 47x19 pixels."
+    }
+  ],
+  "paths": [],
+  "remediations": [
+    {
+      "finding": "Small interactive target",
+      "priority": "LOW",
+      "recommendation": "Review the cited UI state and remove the interaction, accessibility, or workflow barrier identified by the auditor.",
+      "validation": "Re-run the affected workflow and verify the evidence is no longer present."
+    }
+  ],
+  "metrics": {
+    "steps": 2,
+    "verified_actions": 1,
+    "friction_score": 0,
+    "repeated_actions": 0,
+    "backtracks": 0,
+    "dead_ends": 0,
+    "errors": 0,
+    "accessibility": 0,
+    "critical_high": 0,
+    "pages_visited": 0,
+    "avg_step_sec": 0,
+    "verification_rate": 0,
+    "recovery_actions": 0,
+    "goal_checks": 0,
+    "goal_match_evidence": 1,
+    "outcome_confidence": 0
+  },
+  "current_url": "http://127.0.0.1:8000/target/v2/product/blue-sprint",
+  "current_action": "click href:/target/v2/product/blue-sprint",
+  "current_reason": "The exact requested product is already visible; no search is needed: Blue Sprint Running Shoes.",
+  "current_action_type": "click",
+  "latest_screenshot": "/api/runs/13491dc0/step_02.png?v=2",
+  "report_url": "/api/runs/13491dc0/report.html",
+  "evidence": [
+    {
+      "step": 1,
+      "url": "/api/runs/13491dc0/step_01.png?v=1",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2"
+    },
+    {
+      "step": 2,
+      "url": "/api/runs/13491dc0/step_02.png?v=2",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/product/blue-sprint"
+    }
+  ],
+  "cart_verified_exact": false,
+  "baseline": {
+    "status": "SUCCESS",
+    "goal": "Find blue running shoes under $100 and complete guest checkout.",
+    "website": "ShopEasy",
+    "steps": [
+      {
+        "step": 1,
+        "action": "click",
+        "target": "href:/target/v1/product/blue-sprint",
+        "reason": "The exact requested product is already visible; no search is needed: Blue Sprint Running Shoes.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1",
+        "url_after": "http://127.0.0.1:8000/target/v1/product/blue-sprint",
+        "duration_sec": 0.41
+      },
+      {
+        "step": 2,
+        "action": "click",
+        "target": "Add to Cart",
+        "reason": "Add exact goal-matching product: Blue Sprint Running Shoes.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/product/blue-sprint",
+        "url_after": "http://127.0.0.1:8000/target/v1/product/blue-sprint",
+        "duration_sec": 0.1
+      },
+      {
+        "step": 3,
+        "action": "click",
+        "target": "Cart",
+        "reason": "Product already added; open cart for checkout.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/product/blue-sprint",
+        "url_after": "http://127.0.0.1:8000/target/v1/cart",
+        "duration_sec": 0.42
+      },
+      {
+        "step": 4,
+        "action": "click",
+        "target": "Guest Checkout",
+        "reason": "Continue from cart to guest checkout.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/cart",
+        "url_after": "http://127.0.0.1:8000/target/v1/checkout",
+        "duration_sec": 0.34
+      },
+      {
+        "step": 5,
+        "action": "fill",
+        "target": "Full name",
+        "reason": "Fill guest name.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/checkout",
+        "url_after": "http://127.0.0.1:8000/target/v1/checkout",
+        "duration_sec": 0.03
+      },
+      {
+        "step": 6,
+        "action": "fill",
+        "target": "Email",
+        "reason": "Fill guest email.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/checkout",
+        "url_after": "http://127.0.0.1:8000/target/v1/checkout",
+        "duration_sec": 0.03
+      },
+      {
+        "step": 7,
+        "action": "fill",
+        "target": "Delivery address",
+        "reason": "Fill delivery address.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/checkout",
+        "url_after": "http://127.0.0.1:8000/target/v1/checkout",
+        "duration_sec": 0.04
+      },
+      {
+        "step": 8,
+        "action": "click",
+        "target": "Continue to payment",
+        "reason": "Continue after completing checkout fields.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/checkout",
+        "url_after": "http://127.0.0.1:8000/target/v1/checkout/payment",
+        "duration_sec": 0.36
+      },
+      {
+        "step": 9,
+        "action": "fill",
+        "target": "Card number",
+        "reason": "Fill mock payment details.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/checkout/payment",
+        "url_after": "http://127.0.0.1:8000/target/v1/checkout/payment",
+        "duration_sec": 0.04
+      },
+      {
+        "step": 10,
+        "action": "fill",
+        "target": "CVV",
+        "reason": "Fill mock payment details.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/checkout/payment",
+        "url_after": "http://127.0.0.1:8000/target/v1/checkout/payment",
+        "duration_sec": 0.04
+      },
+      {
+        "step": 11,
+        "action": "click",
+        "target": "Place order",
+        "reason": "Submit mock payment.",
+        "ok": true,
+        "error": "",
+        "url_before": "http://127.0.0.1:8000/target/v1/checkout/payment",
+        "url_after": "http://127.0.0.1:8000/target/v1/checkout/success",
+        "duration_sec": 0.41
+      }
+    ],
+    "checkpoints": [
+      "/target/vX/product/blue-sprint",
+      "/target/vX/product/blue-sprint",
+      "/target/vX/cart",
+      "/target/vX/checkout",
+      "/target/vX/checkout",
+      "/target/vX/checkout",
+      "/target/vX/checkout",
+      "/target/vX/checkout/payment",
+      "/target/vX/checkout/payment",
+      "/target/vX/checkout/payment",
+      "/target/vX/checkout/success"
+    ],
+    "checkpoint_labels": [
+      "PRODUCT_DETAIL",
+      "PRODUCT_DETAIL",
+      "CART",
+      "CHECKOUT",
+      "CHECKOUT",
+      "CHECKOUT",
+      "CHECKOUT",
+      "PAYMENT",
+      "PAYMENT",
+      "PAYMENT",
+      "CONFIRMATION"
+    ],
+    "product_evidence": 1,
+    "final_outcome": "SUCCESS"
+  },
+  "error": "Locator.inner_text: Target page, context or browser has been closed\nCall log:\n  - waiting for locator(\"body\")\n",
+  "timestamp": "2026-09-19 15:29:09",
+  "regression": {
+    "v1_status": "SUCCESS",
+    "v2_status": "FAILED",
+    "baseline_checkpoints": 11,
+    "matched_checkpoints": 2,
+    "missing_checkpoints": [
+      "/target/vX/cart",
+      "/target/vX/checkout",
+      "/target/vX/checkout",
+      "/target/vX/checkout",
+      "/target/vX/checkout",
+      "/target/vX/checkout/payment",
+      "/target/vX/checkout/payment",
+      "/target/vX/checkout/payment",
+      "/target/vX/checkout/success"
+    ],
+    "baseline_match": false,
+    "summary": "V2 did not fully match the V1 functional baseline; inspect the new V2 findings.",
+    "new_v2_findings": []
+  }
+}

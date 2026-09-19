@@ -1,0 +1,117 @@
+{
+  "run_id": "a7dd98c9",
+  "goal": "Find blue running jacket shoes under $100 and complete guest checkout.",
+  "version": 2,
+  "site": "shopeasy",
+  "website": "ShopEasy",
+  "status": "FAILED",
+  "outcome": "FAILED",
+  "message": "Requested product is unavailable for the specified constraints.",
+  "steps": [
+    {
+      "step": 1,
+      "action": "fill",
+      "target": "Search products",
+      "reason": "Search for the requested product because it is not currently visible.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2",
+      "url_after": "http://127.0.0.1:8000/target/v2",
+      "duration_sec": 0.04
+    },
+    {
+      "step": 2,
+      "action": "click",
+      "target": "Search",
+      "reason": "The search field is already populated; submit the search instead of refilling it.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8000/target/v2",
+      "url_after": "http://127.0.0.1:8000/target/v2/products?q=blue+running+jacket+shoes",
+      "duration_sec": 0.1
+    }
+  ],
+  "findings": [
+    {
+      "kind": "accessibility",
+      "severity": "LOW",
+      "title": "Small interactive target",
+      "evidence": "Visible A target is 47x19 pixels."
+    },
+    {
+      "kind": "availability",
+      "severity": "HIGH",
+      "title": "Requested product is unavailable",
+      "evidence": "No browser-observed available product satisfies all requested constraints on ShopEasy: Find blue running jacket shoes under $100 and complete guest checkout.. The auditor did not substitute a different product.",
+      "impact": "The requested inventory/workflow cannot be completed as specified.",
+      "remediation": "Show a clear no-results or stock state, preserve the requested constraints, and offer explicit alternatives rather than silently substituting another item."
+    }
+  ],
+  "paths": [
+    {
+      "nodes": [
+        "/",
+        "/products?q=blue+running+jacket+shoes"
+      ],
+      "status": "failed"
+    }
+  ],
+  "remediations": [
+    {
+      "finding": "Requested product is unavailable",
+      "priority": "HIGH",
+      "recommendation": "Keep the no-results/unavailable state explicit. Do not silently substitute a different product.",
+      "validation": "Test a matching request and a non-matching request separately."
+    },
+    {
+      "finding": "Small interactive target",
+      "priority": "LOW",
+      "recommendation": "Review the cited UI state and remove the interaction, accessibility, or workflow barrier identified by the auditor.",
+      "validation": "Re-run the affected workflow and verify the evidence is no longer present."
+    }
+  ],
+  "metrics": {
+    "steps": 3,
+    "verified_actions": 2,
+    "friction_score": 0,
+    "repeated_actions": 0,
+    "backtracks": 0,
+    "dead_ends": 0,
+    "errors": 0,
+    "accessibility": 1,
+    "critical_high": 1,
+    "pages_visited": 2,
+    "avg_step_sec": 0.07,
+    "verification_rate": 100.0,
+    "recovery_actions": 0,
+    "goal_checks": 0,
+    "goal_match_evidence": 0,
+    "outcome_confidence": 0
+  },
+  "current_url": "http://127.0.0.1:8000/target/v2/products?q=blue+running+jacket+shoes",
+  "current_action": "availability_check",
+  "current_reason": "The website explicitly reports no matching products.",
+  "current_action_type": "availability_check",
+  "latest_screenshot": "/api/runs/a7dd98c9/step_03.png?v=3",
+  "report_url": "/api/runs/a7dd98c9/report.html",
+  "evidence": [
+    {
+      "step": 1,
+      "url": "/api/runs/a7dd98c9/step_01.png?v=1",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2"
+    },
+    {
+      "step": 2,
+      "url": "/api/runs/a7dd98c9/step_02.png?v=2",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2"
+    },
+    {
+      "step": 3,
+      "url": "/api/runs/a7dd98c9/step_03.png?v=3",
+      "caption": "Observed state at http://127.0.0.1:8000/target/v2/products?q=blue+running+jacket+shoes"
+    }
+  ],
+  "cart_verified_exact": false,
+  "baseline": null,
+  "timestamp": "2026-09-19 15:29:56"
+}

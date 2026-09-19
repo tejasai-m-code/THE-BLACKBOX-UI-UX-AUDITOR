@@ -1,0 +1,136 @@
+{
+  "run_id": "e23d6b37",
+  "goal": "Find white sneakers under $100 and add to cart.",
+  "version": 1,
+  "site": "shopeasy",
+  "website": "ShopEasy",
+  "status": "SUCCESS",
+  "outcome": "SUCCESS",
+  "message": "Exact requested product verified in cart: White Sneakers.",
+  "steps": [
+    {
+      "step": 1,
+      "action": "fill",
+      "target": "Search products",
+      "reason": "Search for the requested product because it is not currently visible.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8001/target/v1",
+      "url_after": "http://127.0.0.1:8001/target/v1",
+      "duration_sec": 0.03
+    },
+    {
+      "step": 2,
+      "action": "click",
+      "target": "Search",
+      "reason": "The search field is already populated; submit the search instead of refilling it.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8001/target/v1",
+      "url_after": "http://127.0.0.1:8001/target/v1/products?q=white+sneakers",
+      "duration_sec": 0.09
+    },
+    {
+      "step": 3,
+      "action": "click",
+      "target": "href:/target/v1/product/white-sneakers",
+      "reason": "Select the exact browser-observed goal match: White Sneakers.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8001/target/v1/products?q=white+sneakers",
+      "url_after": "http://127.0.0.1:8001/target/v1/product/white-sneakers",
+      "duration_sec": 0.34
+    },
+    {
+      "step": 4,
+      "action": "click",
+      "target": "Add to Cart",
+      "reason": "Add exact goal-matching product: White Sneakers.",
+      "ok": true,
+      "error": "",
+      "url_before": "http://127.0.0.1:8001/target/v1/product/white-sneakers",
+      "url_after": "http://127.0.0.1:8001/target/v1/product/white-sneakers",
+      "duration_sec": 0.14
+    }
+  ],
+  "findings": [
+    {
+      "kind": "accessibility",
+      "severity": "LOW",
+      "title": "Small interactive target",
+      "evidence": "Visible A target is 47x19 pixels."
+    }
+  ],
+  "paths": [
+    {
+      "nodes": [
+        "/",
+        "/products?q=white+sneakers",
+        "/product/white-sneakers"
+      ],
+      "status": "success"
+    }
+  ],
+  "remediations": [
+    {
+      "finding": "Small interactive target",
+      "priority": "LOW",
+      "recommendation": "Review the cited UI state and remove the interaction, accessibility, or workflow barrier identified by the auditor.",
+      "validation": "Re-run the affected workflow and verify the evidence is no longer present."
+    }
+  ],
+  "metrics": {
+    "steps": 5,
+    "verified_actions": 5,
+    "friction_score": 0,
+    "repeated_actions": 0,
+    "backtracks": 0,
+    "dead_ends": 0,
+    "errors": 0,
+    "accessibility": 1,
+    "critical_high": 0,
+    "pages_visited": 3,
+    "avg_step_sec": 0.15,
+    "verification_rate": 125.0,
+    "recovery_actions": 0,
+    "goal_checks": 1,
+    "goal_match_evidence": 1,
+    "outcome_confidence": 0
+  },
+  "current_url": "http://127.0.0.1:8001/target/v1/product/white-sneakers",
+  "current_action": "verify_cart",
+  "current_reason": "Verify exact product in cart after adding (already added; do not click again).",
+  "current_action_type": "verify_cart",
+  "latest_screenshot": "/api/runs/e23d6b37/step_05.png?v=5",
+  "report_url": "/api/runs/e23d6b37/report.html",
+  "evidence": [
+    {
+      "step": 1,
+      "url": "/api/runs/e23d6b37/step_01.png?v=1",
+      "caption": "Observed state at http://127.0.0.1:8001/target/v1"
+    },
+    {
+      "step": 2,
+      "url": "/api/runs/e23d6b37/step_02.png?v=2",
+      "caption": "Observed state at http://127.0.0.1:8001/target/v1"
+    },
+    {
+      "step": 3,
+      "url": "/api/runs/e23d6b37/step_03.png?v=3",
+      "caption": "Observed state at http://127.0.0.1:8001/target/v1/products?q=white+sneakers"
+    },
+    {
+      "step": 4,
+      "url": "/api/runs/e23d6b37/step_04.png?v=4",
+      "caption": "Observed state at http://127.0.0.1:8001/target/v1/product/white-sneakers"
+    },
+    {
+      "step": 5,
+      "url": "/api/runs/e23d6b37/step_05.png?v=5",
+      "caption": "Observed state at http://127.0.0.1:8001/target/v1/product/white-sneakers"
+    }
+  ],
+  "cart_verified_exact": true,
+  "baseline": null,
+  "timestamp": "2026-09-19 15:22:43"
+}
